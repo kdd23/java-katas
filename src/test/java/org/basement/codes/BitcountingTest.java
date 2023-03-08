@@ -15,7 +15,7 @@ public class BitcountingTest {
         assertEquals(3, Bitcounting.countBits(7));
     }
 
-    @Test
+    @Test(expected = IllegalArgumentException.class)
     public void testNegativeCounting () {
         assertEquals(2, Bitcounting.countBits(-10));
     }
