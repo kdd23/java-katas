@@ -1,8 +1,9 @@
-package org.buntu.testpin;
+package org.basement.codes;
 
+/**
+ *
+ */
 public class PINMode {
-
-
     public static boolean validatePin (String pin) {
         String pattern = "([0-9]{6}|([0-9]{4}))";
         boolean validate = false;
