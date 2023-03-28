@@ -1,7 +1,7 @@
-package org.basement.codes;
+package org.root.javakatas.codes;
 
 /**
- *
+ * https://www.codewars.com/kata/55f8a9c06c018a0d6e000132
  */
 public class PINMode {
     public static boolean validatePin (String pin) {
@@ -11,7 +11,7 @@ public class PINMode {
             Integer.parseInt(pin);
         } catch (NumberFormatException ex) {
             System.out.println("Invalid number format" + ex);
-            return validate;
+            return false;
         }
         return pin.matches(pattern);
     }

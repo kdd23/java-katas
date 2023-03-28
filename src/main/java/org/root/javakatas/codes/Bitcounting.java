@@ -1,4 +1,4 @@
-package org.basement.codes;
+package org.root.javakatas.codes;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -17,16 +17,14 @@ import java.util.Collections;
 public class Bitcounting {
 
     public static int countBits (int n) {
-        int r;
         int divisor = 2;
         ArrayList<Integer> list = new ArrayList<>();
         if (n > 0) {
             while (n > 0) {
-                r = n % divisor;
+                int r = n % divisor;
                 n /= divisor;
                 list.add(r);
             }
-
             Collections.reverse(list);
             return (int) list.stream()
                     .filter(item -> item.equals(1)).count();
