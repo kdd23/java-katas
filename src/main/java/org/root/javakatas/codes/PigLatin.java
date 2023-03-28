@@ -6,11 +6,6 @@ package org.root.javakatas.codes;
 public class PigLatin {
     private static final String SPACE = " ";
 
-    public static void main (String[] args) {
-        System.out.println(pigIt("Pig latin is cool"));
-        System.out.println(pigIt("Pig latin is cool"));
-    }
-
     public static String pigIt (String str) {
         String pattern = "[^a-zA-Z0-9]";
         String[] words = str.split(" ");
