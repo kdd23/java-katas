@@ -4,44 +4,44 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Random;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class DigitrootTest {
     private final Random random = new Random();
 
     @Test
     public void Test1 () {
-        assertEquals("Nope!", 7, Digitroot.digitRoot2(16));
+        assertEquals(7, Digitroot.digitRoot2(16), "Nope!");
     }
 
     @Test
     public void Test2 () {
-        assertEquals("Nope!", 6, Digitroot.digitRoot2(195));
+        assertEquals(6, Digitroot.digitRoot2(195), "Nope!");
     }
 
     @Test
     public void Test3 () {
-        assertEquals("Nope!", 2, Digitroot.digitRoot2(992));
+        assertEquals(2, Digitroot.digitRoot2(992), "Nope!");
     }
 
     @Test
     public void Test4 () {
-        assertEquals("Nope!", 9, Digitroot.digitRoot2(99999999));
+        assertEquals(9, Digitroot.digitRoot2(99999999), "Nope!");
     }
 
     @Test
     public void Test5 () {
-        assertEquals("Nope!", 9, Digitroot.digitRoot2(167346));
+        assertEquals(9, Digitroot.digitRoot2(167346), "Nope!");
     }
 
     @Test
     public void Test6 () {
-        assertEquals("Nope!", 1, Digitroot.digitRoot2(10));
+        assertEquals(1, Digitroot.digitRoot2(10), "Nope!");
     }
 
     @Test
     public void Test7 () {
-        assertEquals("Nope! Should work for 0", 0, Digitroot.digitRoot2(0));
+        assertEquals(0, Digitroot.digitRoot2(0), "Nope! Should work for 0");
     }
 
     @Test
@@ -49,7 +49,7 @@ class DigitrootTest {
         System.out.println("100 Random Tests");
         for (int i = 0; i < 100; i++) {
             int n = random.nextInt(1000000);
-            assertEquals("Nope! Should work for " + n, PrivateTestClass.digital_root(n), Digitroot.digitRoot2(n));
+            assertEquals(PrivateTestClass.digital_root(n), Digitroot.digitRoot2(n), "Nope! Should work for " + n);
         }
     }
 
